@@ -26,7 +26,7 @@ module.exports = {
       },
       {
         test: /\.(woff2?|ttf|otf|eot|svg|png|jpg)$/,
-        exclude: /node_modules/,
+        exclude: /(node_modules|bower_components)/,
         loader: 'file-loader',
         options: {
           name: './dist/fonts/[name].[ext]'
@@ -38,6 +38,16 @@ module.exports = {
         use: {
           loader: 'babel-loader'
         }
+      },
+      {
+        test: /\.(pug|jade)$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: 'pug-loader',
+          options: {
+            pretty: true
+          }
+        }
       }
     ]
   },
@@ -45,7 +55,9 @@ module.exports = {
     new Webpack.ProgressPlugin(),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      template: './src/index.html'
+      filename: 'index.html',
+      //favicon: 'favicon.ico',
+      template: './src/index.pug'
     }),
     new CopyWebpackPlugin([{
       from: './src/img',
