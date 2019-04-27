@@ -1,3 +1,4 @@
 import * as _ from 'lodash';
 
-import './styles/main.sass';
+import 'normalize.css';
+import './styles/styles.sass';

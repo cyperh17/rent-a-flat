@@ -25,11 +25,19 @@ module.exports = {
         use: ['style-loader', 'css-loader', 'sass-loader']
       },
       {
-        test: /\.(woff2?|ttf|otf|eot|svg|png|jpg)$/,
+        test: /\.(woff2?|ttf|otf|eot)$/,
         exclude: /(node_modules|bower_components)/,
         loader: 'file-loader',
         options: {
-          name: './dist/fonts/[name].[ext]'
+          name: './fonts/[name].[ext]'
+        }
+      },
+      {
+        test: /\.(jpg|jpeg|png|svg)$/,
+        exclude: /(node_modules|bower_components)/,
+        loader: 'file-loader',
+        options: {
+          name: './img/[name].[ext]'
         }
       },
       {
@@ -59,10 +67,6 @@ module.exports = {
       //favicon: 'favicon.ico',
       template: './src/index.pug'
     }),
-    new CopyWebpackPlugin([{
-      from: './src/img',
-      to: './img'
-    }]),
     new BrowserSyncPlugin({
       host: 'localhost',
       port: 3000,
