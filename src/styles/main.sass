@@ -1,9 +1,69 @@
+$commercials-background-color: rgba(30, 48, 84, 0.9);
+$commercials-text-color: white;
+$commercials-height: 125px;
+$carousel-height: 600px;
+
 main
     article.main
-        height: 600px
-        background-image: url('../img/index.jpg')
-        background-size: cover
-        background-position: center
+        section.carousel
+            height: $carousel-height
+            background-image: url('../img/index.jpg')
+            background-size: cover
+            background-position: center
+
+        section.commercials
+            height: $commercials-height
+            position: relative
+            width: 70%
+            margin: 0 auto
+
+            aside
+                position: absolute
+                color: $commercials-text-color
+                background-color: $commercials-background-color
+                
+                &.description
+                    max-width: 300px
+                    bottom: 50px
+                    padding: 40px
+                    text-align: center
+
+                    h2
+                        p
+                            margin: 0 auto
+                    
+                    p.price
+                        font-size: 26px
+                    
+                    a.contact
+                        text-decoration: none
+                        color: white
+                        border: 1px solid white
+                        display: inline-block
+                        padding: 10px 50px
+                        transition: color 0.4s ease 0s, background-color 0.4s ease 0s
+
+                        &:hover
+                            background-color: white
+                            color: $main-color
+                
+                &.phone
+                    right: 0
+                    bottom: $carousel-height + $commercials-height - 48px
+
+                    p
+                        margin: 15px
+
+                    a
+                        text-decoration: none
+                        font-family: $main-font
+                        color: $commercials-text-color
+
+                        span
+                            font-family: $main-font
+                            display: inline-block
+                            margin-left: 10px
+                            font-size: 16px
     
     article.sell-section
         section
