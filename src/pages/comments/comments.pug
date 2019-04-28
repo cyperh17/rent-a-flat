@@ -1,0 +1,20 @@
+-
+    var list = [
+        {
+            author: 'Анатолий Первых',
+            comment: 'Это комментарий #1'
+        },
+        {
+            author: 'Иван Фадеев',
+            comment: 'Это комментарий #2'
+        },
+        {
+            author: 'Андрей Большов',
+            comment: 'Это комментарий #3'
+        }
+    ]
+each item in list
+    section
+        span
+        h3= item.comment
+        h4= item.author

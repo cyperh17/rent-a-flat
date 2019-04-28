@@ -25,15 +25,15 @@ module.exports = {
         use: ['style-loader', 'css-loader', 'sass-loader']
       },
       {
-        test: /\.(woff2?|ttf|otf|eot)$/,
-        exclude: /(node_modules|bower_components)/,
+        test: /\.(woff2?|ttf|otf|eot|svg)$/,
+        //exclude: /(node_modules|bower_components)/,
         loader: 'file-loader',
         options: {
           name: './fonts/[name].[ext]'
         }
       },
       {
-        test: /\.(jpg|jpeg|png|svg)$/,
+        test: /\.(jpg|jpeg|png|webp)$/,
         exclude: /(node_modules|bower_components)/,
         loader: 'file-loader',
         options: {

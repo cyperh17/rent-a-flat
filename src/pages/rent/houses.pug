@@ -1,0 +1,29 @@
+-
+    var list = [
+        {
+            image: './img/flat_4.webp',
+            title: 'КУРКИНО',
+            price: '5 000 ₽ в неделю',
+            description: 'Описание квартиры на продажу номер 4',
+            bedrooms: 4,
+            href: '#'
+        },
+        {
+            image: './img/flat_5.webp',
+            title: 'КОРОБОВО',
+            price: '450 ₽ в неделю',
+            description: 'Описание квартиры на продажу номер 5',
+            bedrooms: 3,
+            href: '#'
+        }
+    ]
+each item in list
+    section
+        figure
+            h3(style="background-image:url(" + item.image + ")")
+                img(src=item.image)
+            figcaption= item.title
+            p= item.price
+            p= item.bedrooms
+            p= item.description
+            a(href=item.href) Подробнее

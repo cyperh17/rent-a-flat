@@ -1,8 +1,41 @@
 main
-    article
+    article.main
         height: 600px
         background-image: url('../img/index.jpg')
         background-size: cover
         background-position: center
-    img
-        display: none
+    
+    article.sell-section
+        section
+            figure
+                h3
+                    width: 308px
+                    height: 331px
+                    background-size: cover
+                    background-position: center
+
+                    &:nth(0)
+                        background-image: url(../img/flat_1.webp)
+                    &:nth(1)
+                        background-image: url(../img/flat_2.webp)
+                    &:nth(2)
+                        background-image: url(../img/flat_3.webp)
+
+    article.rent-section
+        section
+            figure
+                h3
+                    width: 308px
+                    height: 331px
+                    background-size: cover
+                    background-position: center
+
+                    &:nth(0)
+                        background-image: url(../img/flat_4.webp)
+                    &:nth(1)
+                        background-image: url(../img/flat_5.webp)
+
+article.rent-section
+    section
+        span
+            display: inline-block
