@@ -4,26 +4,30 @@
             image: './img/flat_4.png',
             title: 'КУРКИНО',
             price: '5 000 ₽ в неделю',
-            description: 'Описание квартиры на продажу номер 4',
+            description: 'Описание квартиры на аренду номер 1',
             bedrooms: 4,
-            href: '#'
+            href: '#',
+            class: 'first'
         },
         {
             image: './img/flat_5.png',
             title: 'КОРОБОВО',
             price: '450 ₽ в неделю',
-            description: 'Описание квартиры на продажу номер 5',
+            description: 'Описание квартиры на аренду номер 2',
             bedrooms: 3,
-            href: '#'
+            href: '#',
+            class: 'second'
         }
     ]
 each item in list
-    section
+    section(class=item.class)
+        h3(style="background-image:url(" + item.image + ")")
+            img(src=item.image)
         figure
-            h3(style="background-image:url(" + item.image + ")")
-                img(src=item.image)
             figcaption= item.title
-            p= item.price
-            p= item.bedrooms
-            p= item.description
+            p.price= item.price
+            p.bedrooms
+                span Спален: 
+                span.count= item.bedrooms
+            p.description= item.description
             a(href=item.href) Подробнее

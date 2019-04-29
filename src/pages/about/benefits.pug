@@ -1,23 +1,24 @@
 -
     var list = [
         {
-            icon: '',
+            icon: 'fa fa-usd',
             title: 'НИКАКОЙ СКРЫТОЙ КОМИССИИ',
-            description: 'Это комментарий #1'
+            description: 'Это текст. Отредактируйте его, чтобы рассказать посетителям о себе'
         },
         {
-            icon: '',
+            icon: 'fa fa-check-square-o',
             title: 'БЕСПЛАТНАЯ ОЦЕНКА СТОИМОСТИ',
-            description: 'Это комментарий #2'
+            description: 'Это текст. Отредактируйте его, чтобы рассказать посетителям о себе'
         },
         {
-            icon: '',
+            icon: 'fa fa-building-o',
             title: 'ОФИСЫ ПО ВСЕЙ РОССИИ',
-            description: 'Это комментарий #3'
+            description: 'Это текст. Отредактируйте его, чтобы рассказать посетителям о себе'
         }
     ]
 each item in list
     section
-        span
+        span.icon
+            i(class=item.icon)
         h3= item.title
         h4= item.description

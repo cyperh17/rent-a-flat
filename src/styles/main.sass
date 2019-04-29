@@ -78,6 +78,7 @@ main
 
             section
                 display: inline-block
+                width: 33%
 
                 figure
                     figcaption
@@ -119,8 +120,8 @@ main
                             color: white
 
                     h3
-                        width: 308px
-                        height: 331px
+                        min-width: 300px
+                        height: 335px
                         background-size: cover
                         background-position: center
 
@@ -146,6 +147,163 @@ main
                         background-image: url(../img/flat_5.png)
 
 article.rent-section
-    section
-        span
+    h2
+        font-weight: bolder
+        color: $main-color
+        text-align: center
+        font-size: 28px
+        margin: 80px auto 100px
+    
+    .container
+        margin: 0 auto
+        
+        section
+            position: relative
+            padding: 60px
+
+            h3
+                height: 350px
+                width: 430px
+                position: absolute
+                margin: 0
+                background-size: cover
+                background-position: center
+            
+            figure
+                margin: 0 auto 30px
+                color: white
+                
+                figcaption
+                    padding: 0 0 20px
+                    font-weight: bolder
+                    font-size: 20px
+                
+                p.price
+                    color: white
+                    font-size: 18px
+                    font-weight: bold
+                
+                p.bedrooms
+                    color: $selected-color
+                    font-weight: normal
+                    font-size: 16px
+
+                    span.count
+                        font-weight: bolder
+                
+                p.description
+                    margin: 0 auto
+                
+                a
+                    text-decoration: none
+                    text-align: center
+                    color: white
+                    border: 1px solid white
+                    display: inline-block
+                    padding: 10px
+                    margin: 35px 0 0
+                    width: 200px
+                    transition: color 0.4s ease 0s, background-color 0.4s ease 0s
+
+                    &:hover
+                        background-color: white
+                        color: $main-color
+
+            &.first
+                background-color: $main-color
+
+                figure
+                    margin-left: 50%
+                    text-align: left
+
+                h3
+                    bottom: 70px
+                    left: 20%
+
+            &.second
+                background-color: $secondary-color
+
+                figure
+                    margin-right: 50%
+                    text-align: right
+            
+                h3
+                    top: 70px
+                    right: 20%
+
+article.about
+    h2
+        font-weight: bolder
+        color: $main-color
+        text-align: center
+        font-size: 28px
+        margin: 120px auto 60px
+    
+    .container
+        margin: 0 auto
+        padding: 0 75px 60px
+
+        section
             display: inline-block
+            width: 33%
+            text-align: center
+
+            span.icon
+                display: inline-block
+                color: $selected-color
+                font-size: 60px
+            
+            h3, h4
+                padding: 0 15%
+            
+            h3
+                font-weight: bolder
+                color: $main-color
+                font-size: 18px
+            
+            h4
+                font-weight: normal
+                color: $secondary-color
+                font-size: 16px
+
+article.comments-section
+    background-image: url(../img/wall.jpg)
+    background-attachment: fixed
+    background-size: cover
+    background-position: center
+
+    .overlay
+        background-color: rgba(30, 48, 84, 0.5)
+        padding: 30px
+    
+        h2
+            font-weight: bolder
+            color: white
+            text-align: center
+            font-size: 28px
+            margin: 50px auto
+        
+        .container
+            margin: 0 auto
+            padding: 0 75px 60px
+
+            section
+                display: inline-block
+                width: 33%
+                text-align: center
+        
+                span.icon
+                    color: $selected-color
+                    font-size: 30px
+                
+                p
+                    padding: 0 15%
+                    font-size: 18px
+                
+                p.comment
+                    color: white
+                    font-weight: normal
+                
+                p.author
+                    color: $selected-color
+                    font-weight: bolder
