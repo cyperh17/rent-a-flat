@@ -66,20 +66,70 @@ main
                             font-size: 16px
     
     article.sell-section
-        section
-            figure
-                h3
-                    width: 308px
-                    height: 331px
-                    background-size: cover
-                    background-position: center
+        h2
+            font-weight: bolder
+            color: $main-color
+            text-align: center
+            font-size: 28px
+        
+        .container
+            margin: 0 auto
+            padding: 0 75px
 
-                    &:nth(0)
-                        background-image: url(../img/flat_1.webp)
-                    &:nth(1)
-                        background-image: url(../img/flat_2.webp)
-                    &:nth(2)
-                        background-image: url(../img/flat_3.webp)
+            section
+                display: inline-block
+
+                figure
+                    figcaption
+                        color: $main-color
+                        text-align: left
+                        font-weight: bolder
+                        font-size: 18px
+                    
+                    p.price
+                        color: $main-color
+                        text-align: left
+                        font-weight: normal
+                        font-size: 16px
+                    
+                    p.bedrooms
+                        color: $selected-color
+                        text-align: left
+                        font-weight: normal
+                        font-size: 16px
+
+                        span.count
+                            font-weight: bolder
+                    
+                    p.description
+                        margin: 0 auto
+
+                    a
+                        text-decoration: none
+                        text-align: center
+                        color: $main-color
+                        border: 1px solid $main-color
+                        display: block
+                        padding: 10px 50px
+                        margin: 35px 50px 0
+                        transition: color 0.4s ease 0s, background-color 0.4s ease 0s
+
+                        &:hover
+                            background-color: $main-color
+                            color: white
+
+                    h3
+                        width: 308px
+                        height: 331px
+                        background-size: cover
+                        background-position: center
+
+                        &:nth(0)
+                            background-image: url(../img/flat_1.png)
+                        &:nth(1)
+                            background-image: url(../img/flat_2.png)
+                        &:nth(2)
+                            background-image: url(../img/flat_3.png)
 
     article.rent-section
         section
@@ -91,9 +141,9 @@ main
                     background-position: center
 
                     &:nth(0)
-                        background-image: url(../img/flat_4.webp)
+                        background-image: url(../img/flat_4.png)
                     &:nth(1)
-                        background-image: url(../img/flat_5.webp)
+                        background-image: url(../img/flat_5.png)
 
 article.rent-section
     section

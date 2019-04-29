@@ -1,7 +1,7 @@
 -
     var list = [
         {
-            image: './img/flat_1.webp',
+            image: './img/flat_1.png',
             title: 'НЕМЧИНОВКА',
             price: '25 000 000 ₽',
             description: 'Описание квартиры на продажу номер 1',
@@ -9,7 +9,7 @@
             href: '#'
         },
         {
-            image: './img/flat_2.webp',
+            image: './img/flat_2.png',
             title: 'МАРУШКИНО',
             price: '35 000 000 ₽',
             description: 'Описание квартиры на продажу номер 2',
@@ -17,7 +17,7 @@
             href: '#'
         },
         {
-            image: './img/flat_3.webp',
+            image: './img/flat_3.png',
             title: 'РОДНИКИ',
             price: '45 000 000 ₽',
             description: 'Описание квартиры на продажу номер 3',
@@ -31,7 +31,9 @@ each item in list
             h3(style="background-image:url(" + item.image + ")")
                 img(src=item.image)
             figcaption= item.title
-            p= item.price
-            p= item.bedrooms
-            p= item.description
+            p.price= item.price
+            p.bedrooms
+                span Спален: 
+                span.count= item.bedrooms
+            p.description= item.description
             a(href=item.href) Подробнее
