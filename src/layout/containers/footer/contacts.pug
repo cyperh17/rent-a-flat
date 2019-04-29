@@ -2,22 +2,29 @@ article.address
     h3 АДРЕС
     section
         address
-            p ул. Арбат, 1а, Москва, 119019, Россия
+            p Красная пл., 3, Москва, 101000, Россия
     section.map
+        iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.224485449845!2d37.619405451695215!3d55.75460248045842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a5a1c716c07%3A0x72f16fa7fabe17ae!2z0JrRgNCw0YHQvdCw0Y8g0L_Quy4sIDMsINCc0L7RgdC60LLQsCwgMTAxMDAw!5e0!3m2!1sru!2sru!4v1556560406717!5m2!1sru!2sru",frameborder="0",style="border:0",allowfullscreen)
     
 
 article.contact-form
     h3 ЗАДАЙТЕ ЛЮБОЙ ВОПРОС, МЫ ОТВЕТИМ В САМОЕ БЛИЖАЙШЕЕ ВРЕМЯ:
-    form(action="")
-        input(type="text", name="name")
-        input(type="text", name="title")
-        input(type="email", name="name")
-        textarea(name="message", cols="30", rows="10")
-        input(type="submit", value="Отправить")
+    form.contact-form(action="#")
+        input(type="text", name="name", placeholder="Ваше имя")
+        input(type="text", name="title", placeholder="Тема обращения")
+        input(type="email", name="name", placeholder="Email")
+        textarea(name="message", cols="30", rows="10", placeholder="Обращение")
+        input.submit(type="submit", value="Отправить")
 
 article.contacts
     h3 ХОТИТЕ ПООБЩАТЬСЯ С АГЕНТОМ? ЗВОНИТЕ ИЛИ ПИШИТЕ НАПРЯМУЮ:
     section.email
-        p Email: info@mysite.ru
+        p
+            span.title Email: 
+            span.value
+                a(href="mailto:info@mysite.ru") info@mysite.ru
     section.tel
-        p Телефон: +7 (495) 000-00-01
+        p
+            span.title Телефон: 
+            span.value
+                a(href="tel: +74950000001") +7 (495) 000-00-01
