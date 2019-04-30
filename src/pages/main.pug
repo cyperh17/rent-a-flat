@@ -1,20 +1,52 @@
-article.main
-    section.carousel
-        img(src="./img/index.jpg")
-    section.commercials
-        aside.description
-            h2
-                p ПРОДАЕТСЯ ДОМ
-                p 6 КОМНАТ
-                p 300 м²
-                p В ПОДМОСКОВЬЕ
-            h3 Это текст. Здесь вы можете рассказать подробнее об объекте, который выставлен на продажу.
-            hr
-            p.price 20 000 000 ₽
-            a.contact(href="#") Связаться
-        aside.phone
-            p
-                span
-                    a(href="tel:+74950000000")
-                        i.fa.fa-phone-square
-                            span +7 (495) 000-00-00
+article#main.main
+    .carousel
+        -
+            var list = [
+                {
+                    imageUrl: './img/index.jpg',
+                    commercials: {
+                        title: ['ПРОДАЕТСЯ ДОМ', '6 КОМНАТ', '300 м²', 'В ПОДМОСКОВЬЕ'],
+                        text: 'Это текст. Здесь вы можете рассказать подробнее об объекте, который выставлен на продажу.',
+                        price: '20 000 000 ₽',
+                        url: '#'
+                    }
+                },
+                {
+                    imageUrl: './img/index_2.jpg',
+                    commercials: {
+                        title: ['ПРОДАЕТСЯ ДОМ', '5 КОМНАТ', '200 м²', 'В ПОДОЛЬСКЕ'],
+                        text: 'Это текст. Здесь вы можете рассказать подробнее об объекте, который выставлен на продажу.',
+                        price: '10 000 000 ₽',
+                        url: '#'
+                    }
+                },
+                {
+                    imageUrl: './img/index_3.jpg',
+                    commercials: {
+                        title: ['ПРОДАЕТСЯ ДОМ', '8 КОМНАТ', '500 м²', 'В РОСТОВЕ'],
+                        text: 'Это текст. Здесь вы можете рассказать подробнее об объекте, который выставлен на продажу.',
+                        price: '40 000 000 ₽',
+                        url: '#'
+                    }
+                }
+            ]
+        each item in list
+            .container
+                section.img(style="background-image:url(" + item.imageUrl + ")")
+                    img(src=item.imageUrl)
+                section.commercials
+                    aside.description
+                        h2
+                            -
+                            each sub in item.commercials.title
+                                p= sub
+                        h3= item.commercials.text
+                        hr
+                        p.price= item.commercials.price
+                        a.contact(href=item.commercials.url) Связаться
+    aside.phone
+        p
+            span
+                a(href="tel:+74950000000")
+                    i.fa.fa-phone-square
+                        span +7 (495) 000-00-00

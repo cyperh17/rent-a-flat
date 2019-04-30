@@ -5,24 +5,56 @@ $carousel-height: 600px;
 
 main
     article.main
-        section.carousel
-            height: $carousel-height
-            background-image: url('../img/index.jpg')
-            background-size: cover
-            background-position: center
+        position: relative
 
-        section.commercials
-            height: $commercials-height
+        aside
+            position: absolute
+            color: $commercials-text-color
+            background-color: $commercials-background-color
+
+            &.phone
+                right: 15%
+                top: 0
+
+                p
+                    margin: 15px
+
+                a
+                    text-decoration: none
+                    font-family: $main-font
+                    color: $commercials-text-color
+
+                    span
+                        font-family: $main-font
+                        display: inline-block
+                        margin-left: 10px
+                        font-size: 16px
+                        
+        .carousel
             position: relative
-            width: 70%
-            margin: 0 auto
 
-            aside
-                position: absolute
-                color: $commercials-text-color
-                background-color: $commercials-background-color
-                
-                &.description
+            .container
+                //display: none  
+
+            section.img
+                height: $carousel-height
+                background-size: cover
+                background-position: center
+
+                &:nth(0)
+                    background-image: url(../img/index.jpg)
+                &:nth(1)
+                    background-image: url(../img/index_2.jpg)
+                &:nth(2)
+                    background-image: url(../img/index_3.jpg)
+
+            section.commercials
+                height: $commercials-height
+                position: relative
+                width: 70%
+                margin: 0 auto
+
+                aside.description
                     max-width: 300px
                     bottom: 50px
                     padding: 40px
@@ -46,24 +78,6 @@ main
                         &:hover
                             background-color: white
                             color: $main-color
-                
-                &.phone
-                    right: 0
-                    bottom: $carousel-height + $commercials-height - 48px
-
-                    p
-                        margin: 15px
-
-                    a
-                        text-decoration: none
-                        font-family: $main-font
-                        color: $commercials-text-color
-
-                        span
-                            font-family: $main-font
-                            display: inline-block
-                            margin-left: 10px
-                            font-size: 16px
     
     article.sell-section
         h2

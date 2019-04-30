@@ -33,8 +33,8 @@ module.exports = {
         }
       },
       {
-        test: /\.(jpg|jpeg|png|webp)$/,
-        exclude: /(node_modules|bower_components)/,
+        test: /\.(jpg|jpeg|png|webp|gif)$/,
+        //exclude: /(node_modules|bower_components)/,
         loader: 'file-loader',
         options: {
           name: './img/[name].[ext]'

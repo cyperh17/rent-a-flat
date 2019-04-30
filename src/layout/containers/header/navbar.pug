@@ -2,13 +2,14 @@ nav
     ul.clearfix
         -
             var list = [
-                "Главная",
-                "Покупка",
-                "Аренда",
-                "Агенты",
-                "Контакты"
+                { title: "Главная", anchor: '#main' },
+                { title: "Покупка", anchor: '#byu' },
+                { title: "Аренда", anchor: '#rent' },
+                { title: "Преимущества", anchor: '#benefits' },
+                { title: "Отзывы", anchor: '#comments' },
+                { title: "Контакты", anchor: '#contacts' }
                 ]
         each item in list
-            li
+            li(data-anchor=item.anchor)
                 a
-                    p= item
+                    p= item.title
