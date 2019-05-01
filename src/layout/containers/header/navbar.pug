@@ -1,0 +1,15 @@
+nav
+    ul.clearfix
+        -
+            var list = [
+                { title: "Главная", anchor: '#main' },
+                { title: "Покупка", anchor: '#byu' },
+                { title: "Аренда", anchor: '#rent' },
+                { title: "Преимущества", anchor: '#benefits' },
+                { title: "Отзывы", anchor: '#comments' },
+                { title: "Контакты", anchor: '#contacts' }
+                ]
+        each item in list
+            li(data-anchor=item.anchor)
+                a
+                    p= item.title

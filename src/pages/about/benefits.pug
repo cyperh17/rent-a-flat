@@ -1,0 +1,24 @@
+-
+    var list = [
+        {
+            icon: 'fa fa-usd',
+            title: 'НИКАКОЙ СКРЫТОЙ КОМИССИИ',
+            description: 'Это текст. Отредактируйте его, чтобы рассказать посетителям о себе'
+        },
+        {
+            icon: 'fa fa-check-square-o',
+            title: 'БЕСПЛАТНАЯ ОЦЕНКА СТОИМОСТИ',
+            description: 'Это текст. Отредактируйте его, чтобы рассказать посетителям о себе'
+        },
+        {
+            icon: 'fa fa-building-o',
+            title: 'ОФИСЫ ПО ВСЕЙ РОССИИ',
+            description: 'Это текст. Отредактируйте его, чтобы рассказать посетителям о себе'
+        }
+    ]
+each item in list
+    section
+        span.icon
+            i(class=item.icon)
+        h3= item.title
+        h4= item.description

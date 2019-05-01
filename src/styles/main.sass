@@ -1,0 +1,324 @@
+$commercials-background-color: rgba(30, 48, 84, 0.9);
+$commercials-text-color: white;
+$commercials-height: 125px;
+$carousel-height: 600px;
+
+main
+    article.main
+        position: relative
+
+        aside
+            position: absolute
+            color: $commercials-text-color
+            background-color: $commercials-background-color
+
+            &.phone
+                right: 15%
+                top: 0
+
+                p
+                    margin: 15px
+
+                a
+                    text-decoration: none
+                    font-family: $main-font
+                    color: $commercials-text-color
+
+                    span
+                        font-family: $main-font
+                        display: inline-block
+                        margin-left: 10px
+                        font-size: 16px
+                        
+        .carousel
+            position: relative
+
+            .container
+                //display: none  
+
+            section.img
+                height: $carousel-height
+                background-size: cover
+                background-position: center
+
+                &:nth(0)
+                    background-image: url(../img/index.jpg)
+                &:nth(1)
+                    background-image: url(../img/index_2.jpg)
+                &:nth(2)
+                    background-image: url(../img/index_3.jpg)
+
+            section.commercials
+                height: $commercials-height
+                position: relative
+                width: 70%
+                margin: 0 auto
+
+                aside.description
+                    max-width: 300px
+                    bottom: 50px
+                    padding: 40px
+                    text-align: center
+
+                    h2
+                        p
+                            margin: 0 auto
+                    
+                    p.price
+                        font-size: 26px
+                    
+                    a.contact
+                        text-decoration: none
+                        color: white
+                        border: 1px solid white
+                        display: inline-block
+                        padding: 10px 50px
+                        transition: color 0.4s ease 0s, background-color 0.4s ease 0s
+
+                        &:hover
+                            background-color: white
+                            color: $main-color
+    
+    article.sell-section
+        h2
+            font-weight: bolder
+            color: $main-color
+            text-align: center
+            font-size: 28px
+        
+        .container
+            margin: 0 auto
+            padding: 0 75px
+
+            section
+                display: inline-block
+                width: 33%
+
+                figure
+                    figcaption
+                        color: $main-color
+                        text-align: left
+                        font-weight: bolder
+                        font-size: 18px
+                    
+                    p.price
+                        color: $main-color
+                        text-align: left
+                        font-weight: normal
+                        font-size: 16px
+                    
+                    p.bedrooms
+                        color: $selected-color
+                        text-align: left
+                        font-weight: normal
+                        font-size: 16px
+
+                        span.count
+                            font-weight: bolder
+                    
+                    p.description
+                        margin: 0 auto
+
+                    a
+                        text-decoration: none
+                        text-align: center
+                        color: $main-color
+                        border: 1px solid $main-color
+                        display: block
+                        padding: 10px 50px
+                        margin: 35px 50px 0
+                        transition: color 0.4s ease 0s, background-color 0.4s ease 0s
+
+                        &:hover
+                            background-color: $main-color
+                            color: white
+
+                    h3
+                        min-width: 300px
+                        height: 335px
+                        background-size: cover
+                        background-position: center
+
+                        &:nth(0)
+                            background-image: url(../img/flat_1.png)
+                        &:nth(1)
+                            background-image: url(../img/flat_2.png)
+                        &:nth(2)
+                            background-image: url(../img/flat_3.png)
+
+    article.rent-section
+        section
+            figure
+                h3
+                    width: 308px
+                    height: 331px
+                    background-size: cover
+                    background-position: center
+
+                    &:nth(0)
+                        background-image: url(../img/flat_4.png)
+                    &:nth(1)
+                        background-image: url(../img/flat_5.png)
+
+article.rent-section
+    h2
+        font-weight: bolder
+        color: $main-color
+        text-align: center
+        font-size: 28px
+        margin: 80px auto 100px
+    
+    .container
+        margin: 0 auto
+        
+        section
+            position: relative
+            padding: 60px
+
+            h3
+                height: 350px
+                width: 430px
+                position: absolute
+                margin: 0
+                background-size: cover
+                background-position: center
+            
+            figure
+                margin: 0 auto 30px
+                color: white
+                max-width: 400px
+                
+                figcaption
+                    padding: 0 0 20px
+                    font-weight: bolder
+                    font-size: 20px
+                
+                p.price
+                    color: white
+                    font-size: 18px
+                    font-weight: bold
+                
+                p.bedrooms
+                    color: $selected-color
+                    font-weight: normal
+                    font-size: 16px
+
+                    span.count
+                        font-weight: bolder
+                
+                p.description
+                    margin: 0 auto
+                
+                a
+                    text-decoration: none
+                    text-align: center
+                    color: white
+                    border: 1px solid white
+                    display: inline-block
+                    padding: 10px
+                    margin: 35px 0 0
+                    width: 200px
+                    transition: color 0.4s ease 0s, background-color 0.4s ease 0s
+
+                    &:hover
+                        background-color: white
+                        color: $main-color
+
+            &.first
+                background-color: $main-color
+
+                figure
+                    margin-left: 50%
+                    text-align: left
+
+                h3
+                    bottom: 70px
+                    left: 20%
+
+            &.second
+                background-color: $secondary-color
+
+                figure
+                    margin-right: 50%
+                    text-align: right
+            
+                h3
+                    top: 70px
+                    right: 20%
+
+article.about
+    h2
+        font-weight: bolder
+        color: $main-color
+        text-align: center
+        font-size: 28px
+        margin: 120px auto 60px
+    
+    .container
+        margin: 0 auto
+        padding: 0 75px 60px
+
+        section
+            display: inline-block
+            width: 33%
+            text-align: center
+
+            span.icon
+                display: inline-block
+                color: $selected-color
+                font-size: 60px
+            
+            h3, h4
+                padding: 0 15%
+            
+            h3
+                font-weight: bolder
+                color: $main-color
+                font-size: 18px
+            
+            h4
+                font-weight: normal
+                color: $secondary-color
+                font-size: 16px
+
+article.comments-section
+    background-image: url(../img/wall.jpg)
+    background-attachment: fixed
+    background-size: cover
+    background-position: center
+
+    .overlay
+        background-color: rgba(30, 48, 84, 0.5)
+        padding: 30px
+    
+        h2
+            font-weight: bolder
+            color: white
+            text-align: center
+            font-size: 28px
+            margin: 50px auto
+        
+        .container
+            margin: 0 auto
+            padding: 0 75px 60px
+
+            section
+                display: inline-block
+                width: 33%
+                text-align: center
+        
+                span.icon
+                    color: $selected-color
+                    font-size: 30px
+                
+                p
+                    padding: 0 15%
+                    font-size: 18px
+                
+                p.comment
+                    color: white
+                    font-weight: normal
+                
+                p.author
+                    color: $selected-color
+                    font-weight: bolder

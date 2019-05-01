@@ -1,0 +1,33 @@
+-
+    var list = [
+        {
+            image: './img/flat_4.png',
+            title: 'КУРКИНО',
+            price: '5 000 ₽ в неделю',
+            description: 'Это описание квартиры на аренду номер 1. Отредактируйте текст, чтобы рассказать своим клиентам про данную квартиру.',
+            bedrooms: 4,
+            href: '#',
+            class: 'first'
+        },
+        {
+            image: './img/flat_5.png',
+            title: 'КОРОБОВО',
+            price: '450 ₽ в неделю',
+            description: 'Это описание квартиры на аренду номер 2. Отредактируйте текст, чтобы рассказать своим клиентам про данную квартиру.',
+            bedrooms: 3,
+            href: '#',
+            class: 'second'
+        }
+    ]
+each item in list
+    section.clearfix(class=item.class)
+        h3(style="background-image:url(" + item.image + ")")
+            img(src=item.image)
+        figure
+            figcaption= item.title
+            p.price= item.price
+            p.bedrooms
+                span Спален: 
+                span.count= item.bedrooms
+            p.description= item.description
+            a(href=item.href) Подробнее

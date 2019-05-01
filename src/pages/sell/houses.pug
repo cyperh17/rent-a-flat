@@ -1,0 +1,39 @@
+-
+    var list = [
+        {
+            image: './img/flat_1.png',
+            title: 'НЕМЧИНОВКА',
+            price: '25 000 000 ₽',
+            description: 'Это описание квартиры на продажу номер 1. Отредактируйте текст, чтобы рассказать своим клиентам про данную квартиру.',
+            bedrooms: 4,
+            href: '#'
+        },
+        {
+            image: './img/flat_2.png',
+            title: 'МАРУШКИНО',
+            price: '35 000 000 ₽',
+            description: 'Это описание квартиры на продажу номер 2. Отредактируйте текст, чтобы рассказать своим клиентам про данную квартиру.',
+            bedrooms: 3,
+            href: '#'
+        },
+        {
+            image: './img/flat_3.png',
+            title: 'РОДНИКИ',
+            price: '45 000 000 ₽',
+            description: 'Это описание квартиры на продажу номер 3. Отредактируйте текст, чтобы рассказать своим клиентам про данную квартиру.',
+            bedrooms: 6,
+            href: '#'
+        }
+    ]
+each item in list
+    section
+        figure
+            h3(style="background-image:url(" + item.image + ")")
+                img(src=item.image)
+            figcaption= item.title
+            p.price= item.price
+            p.bedrooms
+                span Спален: 
+                span.count= item.bedrooms
+            p.description= item.description
+            a(href=item.href) Подробнее
